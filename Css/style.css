@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Fredoka:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Play&display=swap');
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Play', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 
 html {
   font-size: 62.5%;
+  background: var(--bg)
   /* 1rem = 10px */
 }
 
 :root {
   --heading: #42445A;
-  --para: #42445A;
-  --para-tint: #42445A;
+  --para: #EEEFFF;
+  --para-tint: #42445b;
   --white: #42445A;
   --helper: #42445A;
   --helper-tint: #42445A;
-  --bg: #42445A;
+  --bg: #151515;
+  --navbg: #272727;
   --gradient: linear-gradient(0deg, #42445A 0%, #4552DE 100%);
   --gradientSupport: -webkit-linear-gradient(0deg, #42445A 0%, #4552DE 100%);
   --shadow: 0rem 0rem 2rem 0rem rgb(132 144 255 / 20%);
@@ -29,7 +31,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Bakbak One', cursive;
+  font-family: 'Jost', sans-serif;
 }
 
 h1 {
@@ -57,12 +59,16 @@ a {
   text-decoration: none;
 }
 
-/* Header */
+/* 
+
+Header 
+
+*/
 
 .header {
   padding: 0 4.8rem;
   height: 6.5rem;
-  background-color: #48FF80;
+  background-color: var(--navbg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,11 +76,24 @@ a {
 
 .header .logo {
   height: 5rem;
+  box-shadow: 0 0 5px lime;
 }
 
 .navbar-lists {
   display: flex;
   gap: 2.5rem;
+}
+
+.navbar-link{
+  display: inline-block;
+  font-size: 1.6rem;
+  color: var(--para);
+  transition: all .1s linear;
+  text-shadow: 0 0 10px lime;
+}
+
+.navbar-link:hover,.navbar-link:active{
+  text-shadow: 0 0 10px tomato;
 }
 
 .logo {
